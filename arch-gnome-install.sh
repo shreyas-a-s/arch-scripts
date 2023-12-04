@@ -2,7 +2,7 @@
 
 sudo pacman -S --noconfirm xorg xorg-xinit xorg-drivers libinput
 
-sudo pacman -S --noconfirm acpid dbus cronie bluez thermald pipewire-jack qjackctl
+sudo pacman -S --noconfirm acpid dbus cronie bluez bluez-hid2hci thermald pipewire-jack qjackctl
 
 sudo sed "/FastConnectable/ c\FastConnectable = true" /etc/bluetooth/main.conf
 
