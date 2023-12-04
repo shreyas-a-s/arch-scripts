@@ -6,6 +6,10 @@ sudo pacman -S --noconfirm acpid dbus cronie bluez bluez-hid2hci thermald pipewi
 
 sudo sed "/FastConnectable/ c\FastConnectable = true" /etc/bluetooth/main.conf
 
+if ! lsmod | grep -q btusb; then
+  sudo modprobe btusb
+fi
+
 sudo pacman -S --noconfirm gnome-shell gnome-tweaks gnome-console gnome-control-center gnome-keyring gnome-backgrounds gnome-calculator fragments gdm nautilus gvfs-mtp gvfs-gphoto2 qt6-wayland secrets baobab
 
 busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s gsconnect@andyholmes.github.io
