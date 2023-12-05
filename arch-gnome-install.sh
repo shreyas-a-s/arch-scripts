@@ -62,3 +62,6 @@ fi
 
 tldr -u
 
+# Lower swappiness value for better utilization of RAM
+sudo sysctl vm.swappiness=10
+
