@@ -34,7 +34,7 @@ yay -Y --gendb
 
 yay -S --noconfirm brave-bin github-desktop-bin vscodium-bin joplin-appimage
 
-pacman -S --noconfirm zoxide pacman-contrib xsel neovim zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting lsd curl bat neofetch trash-cli wget tldr fzf btop make github-cli noto-fonts noto-fonts-cjk noto-font-emoji
+pacman -S --noconfirm zoxide pacman-contrib xsel neovim zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting lsd curl bat neofetch trash-cli wget tldr fzf btop make github-cli noto-fonts noto-fonts-cjk noto-font-emoji obs-studio
 
 echo "[Trigger]                              
 Operation = Upgrade
