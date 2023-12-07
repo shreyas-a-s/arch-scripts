@@ -66,7 +66,7 @@ Target = *
 [Action]
 Description = Cleaning pacman cache...
 When = PostTransaction
-Exec = /usr/bin/paccache -r" | sudo tee /etc/pacman.d/hooks/clean-pkg-cache.hook
+Exec = /usr/bin/paccache -r" | sudo tee /etc/pacman.d/hooks/clean-pkg-cache.hook > /dev/null
 
 # Install auto-cpufreq - For better battery life on laptops
 ( cd .. &&\
@@ -85,7 +85,7 @@ turbo = auto
 governor = powersave
 scaling_min_freq = 400000
 scaling_max_freq = 1700000
-turbo = never" | sudo tee /etc/auto-cpufreq.conf
+turbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
 else
   echo "[charger]
 governor = performance
@@ -93,7 +93,7 @@ turbo = auto
 
 [battery]
 governor = powersave
-turbo = never" | sudo tee /etc/auto-cpufreq.conf
+turbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
 fi
 
 # Enable ufw and set rules
@@ -117,6 +117,6 @@ if [ $(rfkill list wifi | grep "Soft blocked: yes" | wc -l) -gt 0 ] ; then
   rfkill unblock wifi
 else
   rfkill block wifi
-fi' | sudo tee /usr/local/bin/wifi-toggle
+fi' | sudo tee /usr/local/bin/wifi-toggle > /dev/null
 sudo chmod +x /usr/local/bin/wifi-toggle
 
