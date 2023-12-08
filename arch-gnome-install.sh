@@ -77,23 +77,23 @@ sudo auto-cpufreq --install
 
 # Set auto-cpufreq config for i3-115G4
 if [ "$(lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p' | awk -F '-' '{print $NF}')" = "1115G4" ]; then
-  echo "[charger]
-governor = performance
-turbo = auto
+  echo "[charger]\
+  \ngovernor = performance\
+  \nturbo = auto\
 
-[battery]
-governor = powersave
-scaling_min_freq = 400000
-scaling_max_freq = 1700000
-turbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
+  \n[battery]\
+  \ngovernor = powersave\
+  \nscaling_min_freq = 400000\
+  \nscaling_max_freq = 1700000\
+  \nturbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
 else
-  echo "[charger]
-governor = performance
-turbo = auto
+  echo "[charger]\
+  \ngovernor = performance\
+  \nturbo = auto\
 
-[battery]
-governor = powersave
-turbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
+  \n[battery]\
+  \ngovernor = powersave\
+  \nturbo = never" | sudo tee /etc/auto-cpufreq.conf > /dev/null
 fi
 
 # Enable ufw and set rules
