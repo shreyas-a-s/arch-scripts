@@ -120,3 +120,8 @@ else
 fi' | sudo tee /usr/local/bin/wifi-toggle > /dev/null
 sudo chmod +x /usr/local/bin/wifi-toggle
 
+# Add a cron-job to auto clear trash
+if [ $(command -v trash-empty) ]; then
+  echo "@reboot $USER $(command -v trash-empty) 10" | sudo tee /etc/cron.d/auto-trash-empty > /dev/null
+fi
+
