@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Check if running as root
+if [ "$(id -u)" -eq 0 ]; then
+  echo "You must NOT be a root user when running this script. Run it as a normal user." 2>&1
+  exit 1
+fi
+
 # Make output of pacman better
 sudo sed -i '/Color/c Color' /etc/pacman.conf
 sudo sed -i '/VerbosePkgLists/c VerbosePkgLists' /etc/pacman.conf
