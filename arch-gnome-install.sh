@@ -15,8 +15,8 @@ sudo pacman -S --noconfirm xorg xorg-xinit xorg-drivers libinput
 # Install driver stuff
 sudo pacman -S --noconfirm acpid dbus cronie thermald pipewire-jack qjackctl
 
-# Enable acpid and thermald on boot
-sudo systemctl enable acpid thermald
+# Enable acpid, cronie and thermald on boot
+sudo systemctl enable acpid cronie thermald
 
 # Install bluetooth packages and make connecting to bluetooth sound devices better
 sudo pacman -S --noconfirm bluez bluez-hid2hci
