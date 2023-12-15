@@ -48,7 +48,7 @@ dconf load /org/gnome/ < gnome-dconf.conf
 sudo pacman -S --noconfirm xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-gnome
 
 # Install programs I use on a daily basis
-sudo pacman -S --noconfirm git base-devel vlc btop ufw zoxide xsel neovim zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search lsd curl bat neofetch trash-cli wget tldr fzf btop make github-cli noto-fonts noto-fonts-cjk noto-font-emoji obs-studio gparted
+sudo pacman -S --noconfirm git base-devel vlc btop ufw zoxide xsel neovim zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search lsd curl bat neofetch trash-cli wget tldr fzf btop make github-cli noto-fonts noto-fonts-cjk noto-font-emoji obs-studio gparted ncdu
 
 # Install yay - AUR helper
 git clone https://aur.archlinux.org/yay-bin.git
