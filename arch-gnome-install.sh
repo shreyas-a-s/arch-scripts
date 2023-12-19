@@ -129,3 +129,6 @@ else
 fi' | sudo tee /usr/local/bin/wifi-toggle > /dev/null
 sudo chmod +x /usr/local/bin/wifi-toggle
 
+# Add a cron-job to auto clear trash
+echo "@reboot $USER /usr/bin/find /home/$USER/.local/share/Trash/ -mtime +7 -delete" | sudo tee /etc/cron.d/auto-trash-empty > /dev/null
+
