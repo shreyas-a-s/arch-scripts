@@ -75,7 +75,7 @@ Target = *
 [Action]
 Description = Cleaning pacman cache...
 When = PostTransaction
-Exec = /usr/bin/paccache -r" | sudo tee /etc/pacman.d/hooks/clean-pkg-cache.hook > /dev/null
+Exec = /usr/bin/paccache -rk1" | sudo tee /etc/pacman.d/hooks/clean-pkg-cache.hook > /dev/null
 
 # Install auto-cpufreq - For better battery life on laptops
 ( cd .. &&\
